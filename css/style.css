@@ -46,23 +46,22 @@ a:focus-visible, button:focus-visible {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(255, 255, 255, .94);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  background: var(--hdr, var(--yellow));
+  transition: background-color .35s ease;
   padding-top: env(safe-area-inset-top);
 }
 .topbar__row {
   display: flex;
   justify-content: center;
-  padding: 10px var(--pad) 4px;
+  padding: 8px var(--pad) 2px;
 }
-.topbar__logo img { height: 40px; width: auto; }
+.topbar__logo img { height: 30px; width: auto; }
 
 .tabs {
   display: flex;
   gap: 6px;
   overflow-x: auto;
-  padding: 6px var(--pad) 10px;
+  padding: 4px var(--pad) 8px;
   scrollbar-width: none;
   scroll-snap-type: x proximity;
 }
@@ -70,11 +69,11 @@ a:focus-visible, button:focus-visible {
 .tab {
   flex: 0 0 auto;
   scroll-snap-align: center;
-  padding: 8px 14px;
+  padding: 6px 12px;
   border-radius: 999px;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 500;
-  color: #6b6b6b;
+  color: #5c5a52;
   text-decoration: none;
   white-space: nowrap;
   transition: background-color .2s, color .2s;
@@ -83,7 +82,7 @@ a:focus-visible, button:focus-visible {
 
 /* Logodaki çizgilerden türetilen renk şeridi */
 .stripe {
-  height: 4px;
+  height: 3px;
   background: linear-gradient(90deg,
     #C34D96 0 7.6%, #36B3B0 0 15.3%, #DACE31 0 23%, #E6332A 0 30.7%,
     #452A6C 0 38.4%, #97529A 0 46.1%, #93C023 0 53.8%, #1B6376 0 61.5%,
@@ -107,18 +106,18 @@ a:focus-visible, button:focus-visible {
 
 .hero {
   position: relative;
-  min-height: 210px;
+  min-height: 150px;
   display: grid;
   place-items: center;
-  padding: 36px var(--pad) 20px;
+  padding: 28px var(--pad) 14px;
 }
-.hero--plain { min-height: 170px; }
+.hero--plain { min-height: 120px; }
 .hero__title {
   position: relative;
   z-index: 1;
   font-family: var(--display);
   font-weight: 400;
-  font-size: clamp(46px, 14.5vw, 88px);
+  font-size: clamp(36px, 11vw, 64px);
   white-space: nowrap;
   line-height: .9;
   letter-spacing: -.01em;
@@ -132,11 +131,11 @@ a:focus-visible, button:focus-visible {
 .hero__art--left  { left: -18px; }
 .hero__art--right { right: -34px; }
 
-.section--cocktail .hero__art--left  { width: 54px; top: 8px; transform: rotate(-8deg); }
-.section--cocktail .hero__art--right { width: 108px; top: 18px; transform: rotate(10deg); }
-.hero__art--burger { width: 150px; top: 36px; right: -48px; transform: rotate(-6deg); }
-.hero__art--shot   { width: 88px; top: 20px; right: -22px; }
-.hero__art--wine   { width: 56px; top: 30px; left: -16px; transform: rotate(8deg); }
+.section--cocktail .hero__art--left  { width: 42px; top: 8px; transform: rotate(-8deg); }
+.section--cocktail .hero__art--right { width: 80px; top: 14px; transform: rotate(10deg); }
+.hero__art--burger { width: 118px; top: 24px; right: -40px; transform: rotate(-6deg); }
+.hero__art--shot   { width: 66px; top: 16px; right: -18px; }
+.hero__art--wine   { width: 42px; top: 22px; left: -14px; transform: rotate(8deg); }
 
 .section--food .hero { justify-items: start; }
 .section--food .hero__title { text-align: left; padding-right: 90px; }
@@ -155,21 +154,21 @@ a:focus-visible, button:focus-visible {
   margin: 28px auto 0;
   pointer-events: none;
 }
-.tail-art--fries { width: 96px; transform: rotate(-8deg); }
+.tail-art--fries { width: 72px; transform: rotate(-8deg); }
 
 /* ---------- Cocktails ---------- */
 .note {
   text-align: center;
-  font-size: 14px;
-  letter-spacing: .04em;
+  font-size: 12.5px;
+  letter-spacing: .03em;
   color: var(--ink-soft);
 }
 .legend {
   display: flex;
   justify-content: center;
-  gap: 18px;
-  margin: 16px 0 28px;
-  font-size: 13px;
+  gap: 14px;
+  margin: 12px 0 20px;
+  font-size: 12px;
   color: var(--ink-soft);
 }
 .legend li { display: flex; align-items: center; gap: 5px; }
@@ -177,20 +176,20 @@ a:focus-visible, button:focus-visible {
 .cocktails { counter-reset: none; }
 .cocktail {
   display: grid;
-  grid-template-columns: 30px 1fr;
-  column-gap: 8px;
-  padding: 18px 0;
+  grid-template-columns: 24px 1fr;
+  column-gap: 6px;
+  padding: 14px 0;
   border-top: 1px solid var(--line);
 }
 .cocktail:first-child { border-top: 0; }
 .cocktail__no {
   font-family: var(--display);
-  font-size: 28px;
+  font-size: 21px;
   line-height: 1;
-  padding-top: 2px;
+  padding-top: 1px;
 }
 .cocktail__name {
-  font-size: 21px;
+  font-size: 17px;
   font-weight: 600;
   line-height: 1.15;
 }
@@ -198,34 +197,34 @@ a:focus-visible, button:focus-visible {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin: 8px 0 8px;
+  margin: 6px 0 6px;
 }
 .price-chip {
   display: inline-flex;
   align-items: baseline;
   gap: 6px;
-  padding: 4px 10px;
+  padding: 3px 9px;
   border-radius: 999px;
-  font-size: 13px;
+  font-size: 11.5px;
   background: rgba(255, 255, 255, .6);
   border: 1px solid var(--line);
 }
-.price-chip b { font-weight: 600; font-size: 15px; font-variant-numeric: tabular-nums; }
+.price-chip b { font-weight: 600; font-size: 13px; font-variant-numeric: tabular-nums; }
 .price-chip--mock { background: transparent; }
 
 .desc {
   font-style: italic;
-  font-size: 15px;
+  font-size: 13px;
   color: var(--ink-soft);
   line-height: 1.4;
 }
-.tastes { display: flex; gap: 6px; margin-top: 8px; }
-.taste-icon { width: 22px; height: 22px; flex: none; }
-.legend .taste-icon { width: 20px; height: 20px; }
+.tastes { display: flex; gap: 5px; margin-top: 6px; }
+.taste-icon { width: 17px; height: 17px; flex: none; }
+.legend .taste-icon { width: 15px; height: 15px; }
 
 /* ---------- Generic list (yemek / içecek) ---------- */
 .item {
-  padding: 14px 0;
+  padding: 11px 0;
   border-top: 1px solid var(--line);
 }
 .item:first-child { border-top: 0; }
@@ -236,20 +235,20 @@ a:focus-visible, button:focus-visible {
 }
 .item__name {
   flex: 1;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
   line-height: 1.25;
 }
 .item__price {
   flex: none;
-  font-size: 17px;
+  font-size: 14.5px;
   font-weight: 600;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
 .item .desc { margin-top: 3px; }
 
-.group { margin-top: 36px; }
+.group { margin-top: 28px; }
 .group:first-child { margin-top: 8px; }
 .group__title {
   display: flex;
@@ -257,7 +256,7 @@ a:focus-visible, button:focus-visible {
   justify-content: space-between;
   font-family: var(--display);
   font-weight: 400;
-  font-size: 32px;
+  font-size: 25px;
   line-height: 1.05;
   padding-bottom: 8px;
   border-bottom: 1.5px solid var(--ink);
@@ -267,21 +266,21 @@ a:focus-visible, button:focus-visible {
   display: flex;
   gap: 12px;
   font-family: var(--body);
-  font-size: 13px;
+  font-size: 11.5px;
   color: var(--ink-soft);
 }
-.group__cols span, .item__price--col { width: 72px; text-align: right; }
+.group__cols span, .item__price--col { width: 62px; text-align: right; }
 
-.group--compact .item { padding: 10px 0; }
-.group--compact .item__name { font-size: 16px; font-weight: 400; }
-.group--compact .item__price { font-size: 16px; }
+.group--compact .item { padding: 8px 0; }
+.group--compact .item__name { font-size: 14px; font-weight: 400; }
+.group--compact .item__price { font-size: 14px; }
 
 /* 5+1 kutusu */
 .deal {
   margin-top: 40px;
   background: var(--deal);
   border-radius: 18px;
-  padding: 10px 20px;
+  padding: 6px 16px;
   box-shadow: 0 1px 0 rgba(29, 29, 27, .12);
 }
 .deal__row {
@@ -294,12 +293,12 @@ a:focus-visible, button:focus-visible {
 .deal__row:first-child { border-top: 0; }
 .deal__tag {
   font-family: var(--display);
-  font-size: 30px;
+  font-size: 23px;
   line-height: 1;
-  width: 54px;
+  width: 42px;
 }
-.deal__name { flex: 1; font-size: 19px; font-weight: 500; }
-.deal__price { font-size: 18px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.deal__name { flex: 1; font-size: 15.5px; font-weight: 500; }
+.deal__price { font-size: 15px; font-weight: 600; font-variant-numeric: tabular-nums; }
 
 /* ---------- Campaigns ---------- */
 .campaigns {
@@ -323,13 +322,14 @@ a:focus-visible, button:focus-visible {
 
 /* ---------- Footer ---------- */
 .footer {
-  background: #fff;
+  background: var(--yellow);
+  border-top: 1px solid var(--line);
   padding: 40px var(--pad) calc(40px + env(safe-area-inset-bottom));
   text-align: center;
 }
-.footer img { width: 150px; margin: 0 auto 18px; }
+.footer img { width: 120px; margin: 0 auto 18px; }
 .footer p {
-  font-size: 13px;
+  font-size: 11.5px;
   line-height: 1.5;
   color: var(--ink-soft);
   max-width: 34em;

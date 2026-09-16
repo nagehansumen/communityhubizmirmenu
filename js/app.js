@@ -162,7 +162,12 @@
       }
     });
     var s = document.getElementById(id);
-    if (s && theme) theme.setAttribute("content", s.getAttribute("data-theme"));
+    if (s) {
+      var c = s.getAttribute("data-theme");
+      header.style.setProperty("--hdr", c);
+      document.body.style.backgroundColor = c;
+      if (theme) theme.setAttribute("content", c);
+    }
   }
 
   var sections = Array.prototype.slice.call(document.querySelectorAll("main .section"));
