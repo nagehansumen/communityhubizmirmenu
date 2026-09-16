@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Community Hub İzmir — Menü</title>
+  <meta name="description" content="Community Hub İzmir kokteyl, yemek ve içecek menüsü.">
+  <meta name="theme-color" content="#F7EBA8">
+  <meta property="og:title" content="Community Hub İzmir — Menü">
+  <meta property="og:image" content="assets/img/logo.png">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oranienbaum&family=Jost:ital,wght@0,400;0,500;0,600;1,400&display=swap&subset=latin-ext" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar__row">
+      <a href="#kokteyl" class="topbar__logo" aria-label="Community Hub — başa dön">
+        <img src="assets/img/logo.png" alt="Community Hub" width="600" height="386">
+      </a>
+    </div>
+    <nav class="tabs" aria-label="Menü bölümleri">
+      <a href="#kokteyl" class="tab is-active">Quiz Cocktail Menü</a>
+      <a href="#yemek" class="tab">Yemek Menüsü</a>
+      <a href="#icecek" class="tab">İçecek Menüsü</a>
+      <a href="#kampanyalar" class="tab">Kampanyalar</a>
+    </nav>
+    <div class="stripe" aria-hidden="true"></div>
+  </header>
+
+  <main>
+    <!-- COCKTAIL -->
+    <section id="kokteyl" class="section section--cocktail" data-theme="#F7EBA8">
+      <div class="hero">
+        <img class="hero__art hero__art--left" src="assets/img/spritz.webp" alt="" aria-hidden="true">
+        <h1 class="hero__title">Cocktail Menü</h1>
+        <img class="hero__art hero__art--right" src="assets/img/martini.webp" alt="" aria-hidden="true">
+      </div>
+      <div class="wrap">
+        <p class="note" id="kokteyl-not"></p>
+        <ul class="legend" id="tat-lejant" aria-label="Tat açıklamaları"></ul>
+        <ol class="cocktails" id="kokteyl-liste"></ol>
+      </div>
+    </section>
+
+    <!-- YEMEK -->
+    <section id="yemek" class="section section--food" data-theme="#F8CBA8">
+      <div class="hero">
+        <h2 class="hero__title">Yemek Menü</h2>
+        <img class="hero__art hero__art--right hero__art--burger" src="assets/img/burger.webp" alt="" aria-hidden="true" loading="lazy">
+      </div>
+      <div class="wrap">
+        <ul class="list" id="yemek-liste"></ul>
+        <img class="tail-art tail-art--fries" src="assets/img/patates.webp" alt="" aria-hidden="true" loading="lazy">
+      </div>
+    </section>
+
+    <!-- İÇECEK -->
+    <section id="icecek" class="section section--drinks" data-theme="#E1F4FB">
+      <div class="hero">
+        <img class="hero__art hero__art--left hero__art--wine" src="assets/img/sarap.webp" alt="" aria-hidden="true" loading="lazy">
+        <h2 class="hero__title">İçecek Menü</h2>
+        <img class="hero__art hero__art--right hero__art--shot" src="assets/img/shot.webp" alt="" aria-hidden="true" loading="lazy">
+      </div>
+      <div class="wrap">
+        <div id="icecek-gruplar"></div>
+        <div class="deal" id="shot-kampanya"></div>
+      </div>
+    </section>
+
+    <!-- KAMPANYALAR -->
+    <section id="kampanyalar" class="section section--deals" data-theme="#F7EBA8">
+      <div class="hero hero--plain">
+        <h2 class="hero__title">Kampanyalar</h2>
+      </div>
+      <div class="wrap wrap--wide">
+        <div class="campaigns" id="kampanya-liste"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="assets/img/logo.png" alt="Community Hub" width="600" height="386" loading="lazy">
+    <p id="yasal"></p>
+  </footer>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Kampanya görseli">
+    <button class="lightbox__close" type="button" aria-label="Kapat">&times;</button>
+    <img src="" alt="">
+  </dialog>
+
+  <script src="js/menu-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
