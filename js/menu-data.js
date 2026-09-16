@@ -76,7 +76,7 @@ window.MENU = {
     ]},
     { baslik: "Şaraplar", ikiFiyat: true, urunler: [
       { ad: "İsabey  Kırmızı / Beyaz / Blush", fiyat: "295 TL", sise: "1475 TL" },
-      { ad: "Cielo Kırmızı / Beyaz / Blush", fiyat: "", sise: "1925 TL" },
+      { ad: "Cielo Kırmızı / Beyaz / Blush", fiyat: "405 TL", sise: "1925 TL" },
       { ad: "Şampanya Marengo", fiyat: "", sise: "3750 TL" }
     ]},
     { baslik: "Shot", urunler: [
@@ -115,7 +115,7 @@ window.MENU = {
   kampanyalar: [
     { gorsel: "assets/img/kampanya-tuborg-cerez.webp", alt: "Lumina 4+1 — 50 CL Tuborg Şişe+Çerez — 1.100 TL" },
     { gorsel: "assets/img/kampanya-tuborg-bar-tabagi.webp", alt: "Lumina 4+1 — 50 CL Tuborg Şişe+Çıtır Bar Tabağı — 1.350 TL" },
-    { gorsel: "assets/img/kampanya-isabey-peynir.webp", alt: "Lumina 4+1 — 1 Şişe İsabey Şarap+Peynir Tabağı — 1.300 TL" },
+    { gorsel: "assets/img/kampanya-isabey-peynir.webp", alt: "Lumina — 1 Şişe İsabey Şarap+Peynir Tabağı — 1.300 TL" },
     { gorsel: "assets/img/kampanya-kokteyl-cerez-tursu.webp", alt: "Lumina 4+1 — Kokteyl+Çerez+Turşu — 1.800 TL" }
   ]
 };

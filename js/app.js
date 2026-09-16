@@ -95,7 +95,7 @@
     var h = el("h3", "group__title", g.baslik);
     if (g.ikiFiyat) {
       var cols = el("span", "group__cols");
-      cols.appendChild(el("span", null, ""));
+      cols.appendChild(el("span", null, "Kadeh"));
       cols.appendChild(el("span", null, "Şişe"));
       h.appendChild(cols);
     }
